@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Example 08</title>
+
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ejemplo List Custom Content</h1>
+      <div class="list-group">
+        <div class="list-group-item">
+          <a href="#">Enlace 1</a>
+          <p class="list-group-item-text">Texto del elemento de la lista</p>
+        </div>
+        <div class="list-group-item">
+          <a href="#">Enlace 2</a>
+          <p class="list-group-item-text">Texto del elemento de la lista</p>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="list-group">
+        <a href="#" class="list-group-item active">
+          <h4 class="list-group-item-heading">List group item heading</h4>
+          <p class="list-group-item-text">Texto del elemento de la lista</p>
+        </a>
+        <a href="#" class="list-group-item">
+          <h4 class="list-group-item-heading">List group item heading</h4>
+          <p class="list-group-item-text">Texto del elemento de la lista</p>
+        </a>
+      </div>
+
+      <br />
+
+      <div class="panel panel-info panel-table">
+        <div class="panel-heading">Documentos Adjuntos a la Solicitud</div>
+        <div class="panel-body">
+          <div class="list-group">
+            <a class="list-group-item list-group-item-success" href="#">
+              <div class="row">
+                <div class="col-md-10">
+                  <h5 class="list-group-item-heading">
+                    <strong>Adjuntado:</strong> Nombre Archivo.pdf
+                  </h5>
+                </div>
+                <div class="col-md-2">
+                  <p class="list-group-item-text text-right">
+                    <strong>Obligatorio:</strong> Si
+                  </p>
+                </div>
+              </div>
+              <p class="list-group-item-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa cumque voluptate reiciendis officia deleniti inventore laborum sapiente commodi reprehenderit quibusdam animi repellat dolor aut incidunt, itaque eveniet, dolorem numquam sed!.
+              </p>
+            </a>
+            <div class="list-group-item" href="#">
+              <h4 class="list-group-item-heading">Adjuntado: -</h4>
+              <p class="list-group-item-text">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde ducimus cum odit. Possimus placeat delectus sapiente, doloribus aut enim sint similique. Tempore facilis quos, id impedit tenetur inventore assumenda?
+              </p>
+              <p class="list-group-item-text">Obligatorio: No</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-info panel-table">
+        <div class="panel-heading">Documentos Adicionales a la Solicitud</div>
+        <div class="panel-body">
+          <div class="list-group">
+            <a class="list-group-item" href="#">
+              <span class="glyphicon glyphicon-cloud-download"></span> Modelo Incial
+            </a>
+            <a class="list-group-item" href="#">
+              <span class="glyphicon glyphicon-cloud-download"></span> Modelo Relacionado
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Todos los plugins JavaScript de Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Example Accordion</title>
+
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ejemplo Accordion</h1>
+
+      <div id="accordion" class="panel-group" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" id="heading_1" role="tab">
+            <a class="collapsed" role="button" aria-expanded="true" aria-controls="collapseItem_1" href="#collapseItem_1" data-toggle="collapse" data-parent="#">
+              2017&nbsp;-&nbsp;Importe&nbsp;-&nbsp;150,00 €&nbsp;-&nbsp;27/03/2017&nbsp;-&nbsp;Nº Pedido:&nbsp;998877
+            </a>
+          </div>
+          <div class="panel-collapse collapse" id="collapseItem_1" role="tabpanel" aria-labelledby="heading_1">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group form-group-sm">
+                    <label class="control-label">Observaciones</label>
+                    <textarea disabled="disabled" class="form-control input-sm" rows="4" cols="80"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row last"><div class="col-md-12"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" id="heading_2" role="tab">
+            <a class="collapsed" role="button" aria-expanded="true" aria-controls="collapseItem_2" href="#collapseItem_2" data-toggle="collapse" data-parent="#">
+              2017&nbsp;-&nbsp;Importe&nbsp;-&nbsp;10,00 €&nbsp;-&nbsp;27/03/2017&nbsp;-&nbsp;Nº Pedido:&nbsp;123123
+            </a>
+          </div>
+          <div class="panel-collapse collapse" id="collapseItem_2" role="tabpanel" aria-labelledby="heading_2">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group form-group-sm">
+                    <label class="control-label">Observaciones</label>
+                    <textarea disabled="disabled" class="form-control input-sm" rows="4" cols="80"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row last"><div class="col-md-12"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Todos los plugins JavaScript de Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      function extractId(id) {
+        return id.substring(id.indexOf("_") + 1);
+      }
+      $(document).ready(function () {
+        $("#accordion").on("show.bs.collapse", function (e) {
+          var id = extractId($(e.target).attr("id"));
+          var selectorId = "#" + $(e.target).attr("id");
+          alert("id:" + id + ", selectorId:" + selectorId);
+          if (id != "") {
+            //alert(e);
+            //alert(e.target);
+            //alert($(e.target).attr('id'));
+            //alert($(e.target).html());
+            //$(e.target).prev('.panel-heading').children('a').removeAttr('data-toggle');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

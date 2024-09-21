@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Web Template</title>
+
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+      .navbar-primary {
+        background-color: #333;
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+        top: 51px;
+        width: 200px;
+        z-index: 8;
+        overflow: hidden;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in-out;
+      }
+      .navbar-primary.collapsed {
+        width: 60px;
+      }
+      .navbar-primary.collapsed .glyphicon {
+        font-size: 22px;
+      }
+      .navbar-primary.collapsed .nav-label {
+        display: none;
+      }
+      .btn-expand-collapse {
+        position: absolute;
+        display: block;
+        left: 0px;
+        bottom: 0;
+        width: 100%;
+        padding: 8px 0;
+        border-top: solid 1px #666;
+        color: grey;
+        font-size: 20px;
+        text-align: center;
+      }
+      .btn-expand-collapse:hover,
+      .btn-expand-collapse:focus {
+        background-color: #222;
+        color: white;
+      }
+      .btn-expand-collapse:active {
+        background-color: #111;
+      }
+      .navbar-primary-menu,
+      .navbar-primary-menu li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .navbar-primary-menu li a {
+        display: block;
+        padding: 10px 18px;
+        text-align: left;
+        border-bottom: solid 1px #444;
+        color: #337ab7;
+      }
+      .navbar-primary-menu li a.active {
+        background-color: #337ab7;
+        color: #fff;
+      }
+      .navbar-primary-menu li a:hover {
+        background-color: #eee;
+        text-decoration: none;
+        color: #337ab7;
+      }
+      .navbar-primary-menu li a .glyphicon {
+        margin-right: 6px;
+      }
+      .navbar-primary-menu li a:hover .glyphicon {
+        color: #337ab7;
+      }
+      .main-content {
+        /*margin-top: 60px;*/
+        margin-left: 200px;
+        padding: 0px 20px 20px 20px;
+      }
+
+      .collapsed + .main-content {
+        margin-left: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="btn-expand-collapse" class="navbar-brand" href="#"
+            ><span class="glyphicon glyphicon-align-justify"></span
+          ></a>
+          <a class="navbar-brand" href="#">Employee Manager</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#"><span class="glyphicon glyphicon-comment"></span></a>
+            </li>
+            <li class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                ><span class="glyphicon glyphicon-info-sign"></span>
+                <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                ><span class="glyphicon glyphicon-user"></span> Joel
+                <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <nav class="navbar-primary">
+      <!--
+        <a href="#" class="btn-expand-collapse"><span class="glyphicon glyphicon-menu-left"></span></a>
+        -->
+      <ul class="navbar-primary-menu">
+        <li>
+          <a href="web-home.html"><span class="glyphicon glyphicon-home"></span> <span class="nav-label">Home</span></a>
+          <a href="web-jobs.html"><span class="glyphicon glyphicon-list-alt"></span> <span class="nav-label">Jobs</span></a>
+          <a href="web-departments.html"><span class="glyphicon glyphicon-list-alt"></span> <span class="nav-label">Departments</span></a>
+          <a href="#" class="active"><span class="glyphicon glyphicon-list-alt"></span> <span class="nav-label">Employees</span></a>
+          <a href="web-administration.html"><span class="glyphicon glyphicon-wrench"></span> <span class="nav-label">Administration</span></a>
+
+            <!--
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Administration
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span> Users</a></li>
+                                    <li role="presentation"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Configuration</a></li>
+                                    <li role="presentation"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Audit</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            -->
+
+            <!--
+                <a href="#collapseOne" data-toggle="collapse"><span class="glyphicon glyphicon-wrench"></span> <span class="nav-label">Administration</span></a>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span> Users</a></li>
+                            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Configuration</a></li>
+                            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Audit</a></li>
+                        </ul>
+                    </div>
+                </div>
+            -->
+        </li>
+      </ul>
+      <!--
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation"><a href="ejemplo-web-home.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li role="presentation"><a href="ejemplo-web-jobs.html"><span class="glyphicon glyphicon-list-alt"></span> Jobs</a></li>
+            <li role="presentation"><a href="ejemplo-web-departments.html"><span class="glyphicon glyphicon-list-alt"></span> Departments</a></li>
+            <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Employees</a></li>
+            <li role="presentation"><a href="ejemplo-web-administration.html"><span class="glyphicon glyphicon-wrench"></span> Administration</a></li>
+        </ul>
+        -->
+    </nav>
+
+    <div class="main-content">
+      <h1>Employees</h1>
+      <hr />
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form class="form-inline">
+            <div class="row">
+              <div class="col-md-10">
+                <div class="form-group">
+                  <label class="sr-only" for="exampleInputAmount"
+                    >Amount (in dollars)</label
+                  >
+                  <div class="input-group">
+                    <div class="input-group-btn">
+                      <div class="btn-group">
+                        <button
+                          type="button"
+                          class="btn btn-default dropdown-toggle"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="glyphicon glyphicon-search" />
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputAmount"
+                      placeholder=""
+                    />
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default">Go</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-default dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Actions <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-2 text-right">
+                <button type="button" class="btn btn-default">
+                  <span class="glyphicon glyphicon-arrow-left"></span> Reset
+                </button>
+                <button type="button" class="btn btn-primary">Create</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th width="30px">&nbsp;</th>
+            <th>
+              Department Id
+              <span class="glyphicon glyphicon-sort-by-alphabet text-primary" />
+            </th>
+            <th>Job Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Hire Date</th>
+            <th>City</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="btn-group" role="group">
+                <a href="#"><span class="glyphicon glyphicon-pencil" /></a>
+              </div>
+            </td>
+            <td>DEVELOPMENT</td>
+            <td>ANALYST</td>
+            <td>Hildred</td>
+            <td>Donnel</td>
+            <td>hildred.donnel@acss.com</td>
+            <td>14-OCT-18</td>
+            <td>Woodruff</td>
+            <td>United States</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="btn-group" role="group">
+                <a href="#"><span class="glyphicon glyphicon-pencil" /></a>
+              </div>
+            </td>
+            <td>DEVELOPMENT</td>
+            <td>ANALYST</td>
+            <td>Nella</td>
+            <td>Rupnick</td>
+            <td>nella.rupnick@acs3.com</td>
+            <td>06-NOV-18</td>
+            <td>Luxora</td>
+            <td>United States</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="btn-group" role="group">
+                <a href="#"><span class="glyphicon glyphicon-pencil" /></a>
+              </div>
+            </td>
+            <td>DEVELOPMENT</td>
+            <td>MANAGER</td>
+            <td>Joseph</td>
+            <td>Wilke</td>
+            <td>joseph.wilke@acs2.com</td>
+            <td>20-NOV-18</td>
+            <td>Huntingdon</td>
+            <td>United States</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Todos los plugins JavaScript de Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        //$('.btn-expand-collapse').click(function(e) {
+        // $('.navbar-primary').toggleClass('collapsed');
+        //});
+        $("#btn-expand-collapse").click(function (e) {
+          $(".navbar-primary").toggleClass("collapsed");
+        });
+      });
+    </script>
+  </body>
+</html>

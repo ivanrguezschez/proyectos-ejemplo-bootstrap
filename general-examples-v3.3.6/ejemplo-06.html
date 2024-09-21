@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Example 06</title>
+
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        parrado muy largo parrado muy largo parrado muy largo parrado muy
+        largoparrado muy largo parrado muy largo parrado muy largo parrado muy
+        largo parrado muy largo parrado muy largo parrado muy largo parrado muy
+        largo parrado muy largoparrado muy largo parrado muy largo parrado muy
+        largo parrado muy largo parrado muy largo
+      </p>
+      <form role="form">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            placeholder="Introduce tu nombre"
+          />
+        </div>
+        <div class="form-group">
+          <label for="rol">Rol</label>
+          <select class="form-control" id="rol">
+            <option value="">Seleccione...</option>
+            <option value="1">Administrador</option>
+            <option value="2">Auditor</option>
+          </select>
+        </div>
+        <div class="checkbox">
+          <label> <input type="checkbox" /> Usuarios dados de baja </label>
+        </div>
+        <button type="submit" class="btn">Volver</button>
+        <button type="submit" class="btn btn-default btn-primary">
+          Buscar
+        </button>
+      </form>
+
+      <br />
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="ejemplo_email_3" class="col-lg-2 control-label"
+            >Email</label
+          >
+          <div class="col-lg-10">
+            <input
+              type="email"
+              class="form-control"
+              id="ejemplo_email_3"
+              placeholder="Email"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="ejemplo_password_3" class="col-lg-2 control-label"
+            >Contraseña</label
+          >
+          <div class="col-lg-10">
+            <input
+              type="password"
+              class="form-control"
+              id="ejemplo_password_3"
+              placeholder="Contraseña"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-offset-2 col-lg-10">
+            <div class="checkbox">
+              <label> <input type="checkbox" /> No cerrar sesión </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-offset-11 col-lg-1">
+            <button type="submit" class="btn btn-default">Entrar</button>
+          </div>
+        </div>
+      </form>
+
+      <br />
+      <form role="form">
+        <div class="form-group">
+          <label class="control-label">Email</label>
+          <div>
+            <p class="form-control-static">email@ejemplo.com</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="control-label">Contraseña</label>
+          <div>
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword"
+              placeholder="Contraseña"
+            />
+          </div>
+        </div>
+      </form>
+
+      <br />
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-lg-2 control-label">Email</label>
+          <div class="col-lg-10">
+            <p class="form-control-static">email@ejemplo.com</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-lg-2 control-label"
+            >Contraseña</label
+          >
+          <div class="col-lg-10">
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword"
+              placeholder="Contraseña"
+            />
+          </div>
+        </div>
+      </form>
+
+      <br />
+      <!-- Botón normal -->
+      <button type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-search"></span> Buscar
+      </button>
+
+      <!-- Muestra el botón de forma destacada para descubrir fácilmente
+		     el botón principal dentro de un grupo de botones -->
+      <button type="button" class="btn btn-primary">Destacado</button>
+
+      <!-- Indica una acción exitosa o positiva -->
+      <button type="button" class="btn btn-success">Éxito</button>
+
+      <!-- Botón pensado para los mensajes con alertas informativas -->
+      <button type="button" class="btn btn-info">Información</button>
+
+      <!-- Indica que hay que tener cuidado con la acción asociada al botón -->
+      <button type="button" class="btn btn-warning">Advertencia</button>
+
+      <!-- Indica una acción negativa o potencialmente peligrosa -->
+      <button type="button" class="btn btn-danger">Peligro</button>
+
+      <!-- Resta importancia al botón haciéndolo parecer un simple enlace,
+		     aunque conserva tu comportamiento original de botón -->
+      <button type="button" class="btn btn-link">Enlace</button>
+
+      <br />
+
+      <span class="glyphicon glyphicon-search"></span>
+
+      <br />
+
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-align-left"></span>
+          </button>
+
+          <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-align-center"></span>
+          </button>
+
+          <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-align-right"></span>
+          </button>
+
+          <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-align-justify"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Todos los plugins JavaScript de Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

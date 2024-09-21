@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Example Fechas</title>
+
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+	<link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ejemplo de Fechas</h1>
+      <form role="form">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="form-group form-group-sm">
+              <label for="fecha1" class="control-label">Fecha Simple</label>
+              <div
+                class="input-group date"
+                id="datepickerFecha1"
+                data-provide="datepicker"
+              >
+                <input
+                  type="text"
+                  id="fecha1"
+                  name="fecha1"
+                  class="form-control"
+                />
+                <span class="input-group-addon"
+                  ><span class="glyphicon glyphicon-calendar"></span
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group form-group-sm">
+              <label for="fechaDesde" class="control-label"
+                >Fecha Periodo</label
+              >
+              <div
+                class="input-group date"
+                id="datepickerFechaDesde"
+                data-provide="datepicker"
+              >
+                <span class="input-group-addon">Desde</span>
+                <input
+                  type="text"
+                  id="fechaDesde"
+                  name="fechaDesde"
+                  class="form-control"
+                />
+                <span class="input-group-addon"
+                  ><span class="glyphicon glyphicon-calendar"></span
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group form-group-sm">
+              <label for="fechaHasta" class="control-label">&nbsp;</label>
+              <div
+                class="input-group date"
+                id="datepickerFechaHasta"
+                data-provide="datepicker"
+              >
+                <span class="input-group-addon">Hasta</span>
+                <input
+                  type="text"
+                  id="fechaHasta"
+                  name="fechaHasta"
+                  class="form-control"
+                />
+                <span class="input-group-addon"
+                  ><span class="glyphicon glyphicon-calendar"></span
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group form-group-sm">
+              <label for="fechaDesde2" class="control-label"
+                >Fecha Periodo</label
+              >
+              <div
+                class="input-group date"
+                id="datepickerFechaDesde2"
+                data-provide="datepicker"
+              >
+                <span class="input-group-addon">Desde</span>
+                <input
+                  type="text"
+                  id="fechaDesde2"
+                  name="fechaDesde2"
+                  class="form-control"
+                />
+                <span class="input-group-addon"
+                  ><span class="glyphicon glyphicon-calendar"></span
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group form-group-sm">
+              <label for="fechaHasta2" class="control-label">&nbsp;</label>
+              <div
+                class="input-group date"
+                id="datepickerFechaHasta2"
+                data-provide="datepicker"
+              >
+                <span class="input-group-addon">Hasta</span>
+                <input
+                  type="text"
+                  id="fechaHasta2"
+                  name="fechaHasta2"
+                  class="form-control"
+                />
+                <span class="input-group-addon"
+                  ><span class="glyphicon glyphicon-calendar"></span
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group form-group-sm">
+              <label class="control-label"
+                >Fecha Periodo Reducido (desde/hasta)</label
+              >
+              <div class="form-inline">
+                <div
+                  class="col-md-5 input-group date"
+                  id="datepickerFechaDesde3"
+                  data-provide="datepicker"
+                >
+                  <input
+                    type="text"
+                    id="fechaDesde3"
+                    name="fechaDesde3"
+                    class="form-control"
+                  />
+                  <span class="input-group-addon"
+                    ><span class="glyphicon glyphicon-calendar"></span
+                  ></span>
+                </div>
+                <div
+                  class="col-md-5 input-group date"
+                  id="datepickerFechaHasta3"
+                  data-provide="datepicker"
+                >
+                  <input
+                    type="text"
+                    id="fechaHasta3"
+                    name="fechaHasta3"
+                    class="form-control"
+                  />
+                  <span class="input-group-addon"
+                    ><span class="glyphicon glyphicon-calendar"></span
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group form-group-sm">
+              <label for="fecha2" class="control-label"
+                >Fecha Simple Mes/Año</label
+              >
+              <div
+                class="input-group date"
+                id="datepickerFecha2"
+                data-provide="datepicker"
+              >
+                <input
+                  type="text"
+                  id="fecha2"
+                  name="fecha2"
+                  class="form-control"
+                />
+                <span class="input-group-addon"
+                  ><span class="glyphicon glyphicon-calendar"></span
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group form-group-sm">
+              <label for="fecha3" class="control-label">Fecha Simple Año</label>
+              <div
+                class="input-group date"
+                id="datepickerFecha3"
+                data-provide="datepicker"
+              >
+                <input
+                  type="text"
+                  id="fecha3"
+                  name="fecha3"
+                  class="form-control"
+                />
+                <span class="input-group-addon"
+                  ><span class="glyphicon glyphicon-calendar"></span
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group form-group-sm">
+              <label for="fecha4" class="control-label">Fecha Simple Mes</label>
+              <div
+                class="input-group date"
+                id="datepickerFecha4"
+                data-provide="datepicker"
+              >
+                <input
+                  type="text"
+                  id="fecha4"
+                  name="fecha4"
+                  class="form-control"
+                />
+                <div class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--
+    			<div class="col-md-2">
+					<div class="form-group form-group-sm">
+						<label class="control-label">&nbsp;</label>
+						<button class="btn btn-sm" id="boton">Pulse para ver fecha simple mes</button>
+					</div>
+				</div>
+				-->
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div id="valorFecha2" class="alert alert-success" role="alert">
+              <h4 class="alert-heading">Valor de la Fecha Simple Mes/Año</h4>
+              <p></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div id="valorFecha3" class="alert alert-success" role="alert">
+              <h4 class="alert-heading">Valor de la Fecha Simple Año</h4>
+              <p></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div id="valorFecha4" class="alert alert-success" role="alert">
+              <h4 class="alert-heading">Valor de la Fecha Simple Mes</h4>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Todos los plugins JavaScript de Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/bootstrap-datepicker.es.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var options = {
+          //showOnFocus: false,
+          autoclose: true,
+          todayHighlight: true,
+          language: "es",
+        };
+
+        $("#datepickerFecha1").datepicker(options);
+
+        // Una forma
+        $("#datepickerFechaDesde")
+          .datepicker(options)
+          .on("hide", function (event) {
+            $("#datepickerFechaHasta").datepicker(
+              "setStartDate",
+              event.date === undefined ? null : event.date
+            );
+          });
+        $("#datepickerFechaHasta")
+          .datepicker(options)
+          .on("hide", function (event) {
+            $("#datepickerFechaDesde").datepicker(
+              "setEndDate",
+              event.date === undefined ? null : event.date
+            );
+          });
+
+        // Otra forma
+        $("#datepickerFechaDesde2")
+          .datepicker(options)
+          .on("changeDate", function (event) {
+            $("#datepickerFechaHasta2").datepicker("setStartDate", event.date);
+          });
+        $("#datepickerFechaDesde2")
+          .datepicker(options)
+          .on("clearDate", function (event) {
+            $("#datepickerFechaHasta2").datepicker("setStartDate", null);
+          });
+        $("#datepickerFechaHasta2")
+          .datepicker(options)
+          .on("changeDate", function (event) {
+            $("#datepickerFechaDesde2").datepicker("setEndDate", event.date);
+          });
+        $("#datepickerFechaHasta2")
+          .datepicker(options)
+          .on("clearDate", function (event) {
+            $("#datepickerFechaDesde2").datepicker("setEndDate", null);
+          });
+
+        $("#datepickerFechaDesde3")
+          .datepicker(options)
+          .on("hide", function (event) {
+            $("#datepickerFechaHasta3").datepicker(
+              "setStartDate",
+              event.date === undefined ? null : event.date
+            );
+          });
+        $("#datepickerFechaHasta3")
+          .datepicker(options)
+          .on("hide", function (event) {
+            $("#datepickerFechaDesde3").datepicker(
+              "setEndDate",
+              event.date === undefined ? null : event.date
+            );
+          });
+
+        $("#datepickerFecha2").datepicker({
+          autoclose: true,
+          todayHighlight: true,
+          language: "es",
+          format: "mm/yyyy",
+          startView: 2,
+          minViewMode: 1,
+        });
+        $("#datepickerFecha3").datepicker({
+          autoclose: true,
+          todayHighlight: true,
+          language: "es",
+          format: "yyyy",
+          startView: 2,
+          minViewMode: 2,
+        });
+        $("#datepickerFecha4").datepicker({
+          autoclose: true,
+          todayHighlight: true,
+          language: "es",
+          format: "MM",
+          startView: 1,
+          minViewMode: 1,
+          maxViewMode: 1,
+        });
+
+        $("#datepickerFecha2")
+          .datepicker()
+          .on("hide", function (event) {
+            $("#valorFecha2")
+              .find("p")
+              .html(
+                $("#fecha2").val() +
+                  "<br/>" +
+                  event.format() +
+                  "<br/>" +
+                  event.date
+              );
+          });
+        $("#datepickerFecha3")
+          .datepicker()
+          .on("hide", function (event) {
+            $("#valorFecha3")
+              .find("p")
+              .html(
+                $("#fecha3").val() +
+                  "<br/>" +
+                  event.format() +
+                  "<br/>" +
+                  event.date
+              );
+          });
+        $("#datepickerFecha4")
+          .datepicker()
+          .on("hide", function (event) {
+            $("#valorFecha4")
+              .find("p")
+              .html(
+                $("#fecha4").val() +
+                  "<br/>" +
+                  event.format() +
+                  "<br/>" +
+                  event.date
+              );
+          });
+
+        /*
+   			$('#boton').click(function (event) {
+   				event.preventDefault();
+				$('#valorFecha4').find('p').html($('#fecha4').val() + '-' + ($('#datepickerFecha4').datepicker("getDate") == null ? '' : $('#datepickerFecha4').datepicker("getDate")));
+    		});
+    		*/
+      });
+    </script>
+  </body>
+</html>

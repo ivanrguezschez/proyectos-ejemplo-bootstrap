@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Example Listas de Asignación 02</title>
+
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ejemplo de Listas de Asignación 2</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Lista de Procedimientos</h4>
+          <div class="form-group form-group-sm">
+            <label for="procedimientos" class="control-label">Lista de Procedimientos</label>
+            <div class="input-group">
+              <select id="procedimientos" name="procedimientos" class="form-control input-sm">
+                <option value="">Seleccione...</option>
+                <option value="1">Procedimiento 1</option>
+                <option value="2">Procedimiento 2</option>
+                <option value="3">Procedimiento 3</option>
+                <option value="4">Procedimiento 4</option>
+                <option value="5">Procedimiento 5</option>
+              </select>
+              <span class="input-group-btn">
+                <button id="buttonPlus" type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <input type="hidden" id="procedimientosAsignados" name="procedimientosAsignados" value="" />
+          <label for="procedimientosAsignados" class="control-label">Lista de Procedimientos Asignados</label>
+          <ul
+            id="listProcedimientos"
+            class="list-group"
+            style="
+              border: 1px solid #dddddd;
+              padding: 0px;
+              margin: 0px;
+              overflow-y: auto;
+              height: 150px;
+            "
+          >
+            <!--
+				<li class="list-group-item">Enlace 1</li>
+				<li class="list-group-item">Enlace 2</li>
+				<li class="list-group-item">Enlace 3</li>
+				<li class="list-group-item">Enlace 4</li>
+				<li class="list-group-item">Enlace 5</li>
+            -->
+          </ul>
+        </div>
+      </div>
+      <p></p>
+      <div class="row">
+        <div class="col-md-12">
+          <button id="btnEnviar" class="btn btn-sm btn-primary">
+            <span class="glyphicon glyphicon-check"></span> Enviar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Todos los plugins JavaScript de Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        updateButtons();
+        $("#btnEnviar").click(function () {
+          var ids = [];
+          $("#listProcedimientos > li").each(function (index, item) {
+            ids.push($(item).attr("id"));
+          });
+          $("#procedimientosAsignados").val(ids.join(";"));
+          alert(
+            "Procedimientos Asignados: " + $("#procedimientosAsignados").val()
+          );
+        });
+        $("#procedimientos").change(function () {
+          updateButtons();
+        });
+        $("#buttonPlus").click(function (e) {
+          var procedimientoSelected = $("#procedimientos :selected");
+          var htmlLi = '<li id="' + procedimientoSelected.val() + '" class="list-group-item">';
+          htmlLi += procedimientoSelected.text();
+          htmlLi += '<span class="pull-right"><span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-minus"></span></span></span>';
+          htmlLi += "</li>";
+
+          $("#listProcedimientos").append(htmlLi);
+
+          procedimientoSelected.remove();
+
+          // Ordenar list procedimientos
+          sortUl();
+
+          updateButtons();
+        });
+        $("#listProcedimientos").on("click", "span.btn", function () {
+          var li = $(this).parents("li");
+          $("#procedimientos").append(
+            $("<option>", { value: li.attr("id"), text: li.text() })
+          );
+          li.remove();
+
+          // Ordenar procedimientos
+          sortSelect();
+
+          updateButtons();
+        });
+      });
+      function updateButtons() {
+        if ($("#procedimientos").val() == "") {
+          $("#buttonPlus").attr("disabled", "disabled");
+        } else {
+          $("#buttonPlus").removeAttr("disabled");
+        }
+      }
+      function sortSelect() {
+        var selectOptions = $("#procedimientos option");
+        selectOptions.sort(function (a, b) {
+          if (a.value == "" || b.value == "") {
+            return 1; // La opcion 'Seleccione...' es la primera opcion.
+          } else if (a.text > b.text) {
+            return 1;
+          } else if (a.text < b.text) {
+            return -1;
+          } else {
+            return 0;
+          }
+        });
+        $("#procedimientos").empty().append(selectOptions);
+      }
+      function sortUl() {
+        var selectLis = $("#listProcedimientos li");
+        selectLis.sort(function (a, b) {
+          if ($(a).text() > $(b).text()) {
+            return 1;
+          } else if ($(a).text() < $(b).text()) {
+            return -1;
+          } else {
+            return 0;
+          }
+        });
+        $("#listProcedimientos").empty().append(selectLis);
+      }
+    </script>
+  </body>
+</html>

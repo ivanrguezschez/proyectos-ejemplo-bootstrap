@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Example Listas de Asignación 01</title>
+
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ejemplo de Listas de Asignación</h1>
+      <div class="row">
+        <div class="col-md-5">
+          <h4>Lista de Procedimientos</h4>
+          	<!--
+				<div class="dropdown text-right">
+  					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    					<span class="glyphicon glyphicon-list"></span> <span class="caret"></span>
+  					</button>
+  					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    					<li><a href="#">Seleccionar Todos</a></li>
+    					<li><a href="#">Deseleccionar Todos</a></li>
+  					</ul>
+				</div>
+			-->
+        </div>
+        <div class="col-md-2">&nbsp;</div>
+        <div class="col-md-5">
+          <h4>Lista de Procedimientos Asignados</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-md-5"
+          style="
+            border: 1px solid #dddddd;
+            padding: 0px;
+            margin: 0px;
+            overflow-y: auto;
+            height: 150px;
+          "
+        >
+          <!--<div class="col-md-5" style="border: 1px solid #DDDDDD;">-->
+          <ul id="listProcedimientos" class="list-group">
+            <li class="list-group-item">Enlace 1</li>
+            <li class="list-group-item">Enlace 2</li>
+            <li class="list-group-item">Enlace 3</li>
+            <li class="list-group-item">Enlace 4</li>
+            <li class="list-group-item">Enlace 5</li>
+          </ul>
+        </div>
+        <div class="col-md-2 text-center">
+          	<!--
+				<ul class="list-group">
+					<li class="list-group-item"><button class="btn btn-md btn-default"><span class="glyphicon glyphicon-cloud-download"></span></button></li>
+					<li class="list-group-item"><button class="btn btn-md btn-default"><span class="glyphicon glyphicon-cloud-download"></span></button></li>
+				</ul>
+			-->
+          	<!--
+				<button id="buttonRight" class="btn btn-md btn-default"><span class="glyphicon glyphicon-menu-right"></span></button>
+				<br/>
+				<button id="buttonLeft" class="btn btn-md btn-default"><span class="glyphicon glyphicon-menu-left"></span></button>
+			-->
+          <div class="btn-group-vertical">
+            <button id="buttonRight" class="btn btn-md btn-default">
+              <span class="glyphicon glyphicon-menu-right"></span>
+            </button>
+            <button id="buttonLeft" class="btn btn-md btn-default">
+              <span class="glyphicon glyphicon-menu-left"></span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="col-md-5"
+          style="
+            border: 1px solid #dddddd;
+            padding: 0px;
+            margin: 0px;
+            overflow-y: auto;
+            height: 150px;
+          "
+        >
+          <ul id="listProcedimientosAsignados" class="list-group"></ul>
+        </div>
+      </div>
+      <br />
+      <div class="row" style="border: 1px solid black">
+        <div class="col-md-5">
+          <a id="linkSeleccionarTodo" href="#">Seleccionar Todo</a>
+          &nbsp;|&nbsp;
+          <a id="linkDeseleccionarTodo" href="#">Deseleccionar Todo</a>
+        </div>
+        <div class="col-md-2">&nbsp;</div>
+        <div class="col-md-5">
+          <a id="linkSeleccionarTodoAsignados" href="#">Seleccionar Todo</a>
+          &nbsp;|&nbsp;
+          <a id="linkDeseleccionarTodoAsignados" href="#">Deseleccionar Todo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Todos los plugins JavaScript de Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        updateButtons();
+        $("#buttonRight").click(function (e) {
+          $("#listProcedimientos > li").each(function (index, item) {
+            if ($(item).hasClass("active")) {
+              $(item).removeClass("active");
+              $("#listProcedimientosAsignados").append($(item).clone());
+              $(item).remove();
+            }
+          });
+          updateButtons();
+        });
+        $("#buttonLeft").click(function () {
+          $("#listProcedimientosAsignados > li").each(function (index, item) {
+            if ($(item).hasClass("active")) {
+              $(item).removeClass("active");
+              $("#listProcedimientos").append($(item).clone());
+              //$('#listProcedimientosAsignados').remove(item);
+              $(item).remove();
+            }
+          });
+          updateButtons();
+        });
+        $("#listProcedimientos").on("click", "li", function () {
+          $(this).toggleClass("active");
+          updateButtons();
+        });
+        $("#listProcedimientosAsignados").on("click", "li", function () {
+          $(this).toggleClass("active");
+          updateButtons();
+        });
+        $("#linkSeleccionarTodo").click(function () {
+          $("#listProcedimientos > li").addClass("active");
+          updateButtons();
+        });
+        $("#linkDeseleccionarTodo").click(function () {
+          $("#listProcedimientos > li").removeClass("active");
+          updateButtons();
+        });
+        $("#linkSeleccionarTodoAsignados").click(function () {
+          $("#listProcedimientosAsignados > li").addClass("active");
+          updateButtons();
+        });
+        $("#linkDeseleccionarTodoAsignados").click(function () {
+          $("#listProcedimientosAsignados > li").removeClass("active");
+          updateButtons();
+        });
+      });
+      function updateButtons() {
+        if ($("#listProcedimientos > li").hasClass("active")) {
+          $("#buttonRight").removeAttr("disabled");
+        } else {
+          $("#buttonRight").attr("disabled", "disabled");
+        }
+
+        if ($("#listProcedimientosAsignados > li").hasClass("active")) {
+          $("#buttonLeft").removeAttr("disabled");
+        } else {
+          $("#buttonLeft").attr("disabled", "disabled");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Example 01</title>
+
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+      .btn-clave-o {
+        color: #333;
+        background-color: #f46a07;
+        border-color: #ccc;
+      }
+      .btn-clave-o:focus,
+      .btn-clave-o.focus {
+        border-color: #8c8c8c;
+      }
+      .btn-clave-o:hover {
+        border-color: #adadad;
+      }
+      .btn-clave-o:active,
+      .btn-clave-o.active {
+        border-color: #adadad;
+      }
+      .btn-clave-w {
+        color: #333;
+        background-color: #ffffff;
+        border-color: #ccc;
+      }
+      .btn-clave-w:focus,
+      .btn-clave-w.focus {
+        border-color: #8c8c8c;
+      }
+      .btn-clave-w:hover {
+        border-color: #adadad;
+      }
+      .btn-clave-w:active,
+      .btn-clave-w.active {
+        border-color: #adadad;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>¡Hola mundo!</h1>
+
+    <div class="row" style="background-color: #c8e5bc">
+      <div class="col-sm-6" style="background-color: #b9def0">
+        <p>un parrafo en un columna col-sm-6</p>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="row" style="background-color: #c8e5bc">
+      <div class="col-md-4" style="background-color: #ffffff">
+        <p>un parrafo en un columna col-md-4</p>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="row" style="background-color: #c8e5bc">
+      <div class="col-md-4 col-md-offset-4" style="background-color: #ffffff">
+        <p>un parrafo en un columna col-md-4</p>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="row" style="background-color: #c8e5bc">
+      <div class="col-md-4 col-md-offset-8" style="background-color: #ffffff">
+        <p>un parrafo en un columna col-md-4</p>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="row" style="background-color: #c8e5bc">
+      <div
+        class="col-sm-6 col-md-4 col-md-offset-4"
+        style="background-color: #ffffff"
+      >
+        <h1 class="text-center">Login to Admin Panel</h1>
+        <div>
+          <form class="">
+            <div class="alert alert-danger">Invalid username/password</div>
+            <input type="text" class="form-control" placeholder="Username" />
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+            />
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="img/clave_o_16.jpg" />
+        <br />
+        <img src="img/clave_o_24.jpg" />
+        <br />
+        <img src="img/clave_o_32.jpg" />
+        <br />
+        <img src="img/clave_o_64.jpg" />
+      </div>
+      <div class="col-sm-6">
+        <img src="img/clave_w_16.jpg" />
+        <br />
+        <img src="img/clave_w_24.jpg" />
+        <br />
+        <img src="img/clave_w_32.jpg" />
+        <br />
+        <img src="img/clave_w_64.jpg" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <a href="#"><img src="img/clave_o_16.jpg" /></a>
+        <br />
+        <a href="#"><img src="img/clave_o_24.jpg" /></a>
+        <br />
+        <a href="#"><img src="img/clave_o_32.jpg" /></a>
+        <br />
+        <a href="#"><img src="img/clave_o_64.jpg" /></a>
+      </div>
+      <div class="col-sm-6">
+        <a href="#"><img src="img/clave_w_16.jpg" /></a>
+        <br />
+        <a href="#"><img src="img/clave_w_24.jpg" /></a>
+        <br />
+        <a href="#"><img src="img/clave_w_32.jpg" /></a>
+        <br />
+        <a href="#"><img src="img/clave_w_64.jpg" /></a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <button class="btn btn-default">
+          <img src="img/clave_o_16.jpg" />
+        </button>
+        &nbsp;
+        <button class="btn btn-default">
+          <img src="img/clave_o_24.jpg" />
+        </button>
+        &nbsp;
+        <button class="btn btn-default">
+          <img src="img/clave_o_32.jpg" />
+        </button>
+        &nbsp;
+        <button class="btn btn-default">
+          <img src="img/clave_o_64.jpg" />
+        </button>
+
+        <br />
+
+        <button class="btn btn-lg btn-default">Boton lg</button>
+        <button class="btn btn-sm btn-default">Boton sm</button>
+        <button class="btn btn-xs btn-default">Boton xs</button>
+        <button class="btn btn-danger">Boton</button>
+        <button class="btn btn-info">Boton</button>
+        <button class="btn btn-warning">Boton</button>
+        <button class="btn btn-success">Boton</button>
+        <button class="btn btn-default">Boton</button>
+        <button class="btn btn-primary">Boton</button>
+
+        <button
+          class="btn"
+          style="
+            width: 72px;
+            height: 30px;
+            background: #f46a07 url('img/clave_o_24.jpg') no-repeat center
+              center;
+          "
+        ></button>
+
+        <button class="btn btn-clave-o">
+          <img src="img/clave_o_24.jpg" />
+        </button>
+
+        <button class="btn btn-clave-w">
+          <img src="img/clave_w_24.jpg" />
+        </button>
+      </div>
+      <div class="col-sm-6">
+        <button class="btn btn-default">
+          <img src="img/clave_w_16.jpg" />
+        </button>
+        &nbsp;
+        <button class="btn btn-default">
+          <img src="img/clave_w_24.jpg" />
+        </button>
+        &nbsp;
+        <button class="btn btn-default">
+          <img src="img/clave_w_32.jpg" />
+        </button>
+        &nbsp;
+        <button class="btn btn-default">
+          <img src="img/clave_w_64.jpg" />
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-center">
+          Acceso de los usuarios a la aplicación <b>XXXX</b>. Seleccione la
+          forma con la cual desea <b>Identificarse</b> en el sistema.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-1" style="background-color: #9acfea">
+        <p class="text-center">
+          Acceso mediante un <b>Certificado Electrónico</b>.
+        </p>
+        <p class="text-center">
+          <button class="btn btn-lg btn-primary">
+            <span class="glyphicon glyphicon-chevron-left"></span> Entrar
+          </button>
+        </p>
+      </div>
+      <div class="col-md-4 col-md-offset-2" style="background-color: #e7c3c3">
+        <p class="text-center">Acceso mediante el sistema <b>Cl@ve</b></p>
+        <p class="text-center">
+          <button class="btn btn-lg btn-clave-w">
+            <img src="img/clave_w_24.jpg" />
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Todos los plugins JavaScript de Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

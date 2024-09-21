@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo 01 de Sidebar en Bootstrap v4.5.3</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min-4.5.3.css" />
+
+    <link rel="stylesheet" href="css/sidebar-01.css" />
+  </head>
+  <body>
+    <div id="wrapper" class="d-flex">
+      <!-- Sidebar -->
+      <!--
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">Start Bootstrap</a>
+                </li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Shortcuts</a></li>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Event</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+        -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">Start Bootstrap</div>
+        <div class="list-group list-group-flush">
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            >Dashboard</a
+          >
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            >Shortcuts</a
+          >
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            >Overview</a
+          >
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            >Events</a
+          >
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            >Profile</a
+          >
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            >Status</a
+          >
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <!--
+	        <div class="container-fluid">
+                <h1>Simple Sidebar</h1>
+                <p>
+                    This template has a reponsive menu toggling system. The menu will apper
+                    collapsed on smaller screens, and will appear non-collapsed on larger screens.
+                    When toggled using the button below, the menu will appear/disappear. On small 
+                    screens, the page content will pushed off canvas.
+                </p>
+                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+			</div>
+			-->
+        <div class="container-fluid">
+          <h1 class="mt-4">Simple Sidebar</h1>
+          <p>
+            The starting state of the menu will appear collapsed on smaller
+            screens, and will appear non-collapsed on larger screens. When
+            toggled using the button below, the menu will change.
+          </p>
+          <p>
+            Make sure to keep all page content within the
+            <code>#page-content-wrapper</code>. The top navbar is optional, and
+            just for demonstration. Just create an element with the
+            <code>#menu-toggle</code> ID which will toggle the menu when
+            clicked.
+          </p>
+          <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.min-4.5.3.js"></script>
+
+    <script>
+      $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+    </script>
+  </body>
+</html>
